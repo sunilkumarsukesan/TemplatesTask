@@ -1,0 +1,22 @@
+{%extends ("base.html")%}
+{%block content%}
+<div class="jumbotron">
+<h2>Here is the result!!!</h2>
+</div>
+<div class="container">
+{% if up>0 and lower>0 and digitcheck %}
+<p> Validation successfull!!!</p>
+{% else %}
+<h1>Validation failed due to the following : </h1>
+{%if up==0 %}
+<p>Username doesnt contains any uppercase</p>
+{% endif %}
+{%if lower==0%}
+<p>Username doesnt contains any lowercase</p>
+{% endif %}
+{%if not digitcheck%}
+<p>Username doesnt ends with a number</p>
+{% endif %}
+{% endif %}
+</div>
+{%endblock%}

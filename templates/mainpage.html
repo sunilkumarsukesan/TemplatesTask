@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%block content%}
+<div class='jumbotron' id="Mainpage">
+  <h1>Welcome to the username checker site!!</h1>
+
+</div>
+<div class="container">
+  <ul>
+  <li>username should have an uppercase</li>
+  <li>username should have a lowercase</li>
+  <li>username should end with a number</li>
+  </ul>
+  <br>
+<p><b>Enter the username in the below text box and click on validate button</b></p>
+<form action="{{url_for('resultpage')}}">
+  <label for="username">User Name</label>
+  <input type="text" name="username">
+  <input type="submit" value="Submit button">
+</form>
+</div>
+{%endblock%}
